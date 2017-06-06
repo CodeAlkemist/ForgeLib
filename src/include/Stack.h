@@ -67,7 +67,7 @@ int stack_check(Stack *stack)
 {
 	return stack->data[stack->size];
 }
-
+/* */
 void stack_free(Stack *stack)
 {
 	free(stack);
