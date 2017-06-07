@@ -1,6 +1,5 @@
 /**
  * Copyright (c) 2017 Matheus Silva
- * String data-type
  */
 
 #include <stdlib.h>

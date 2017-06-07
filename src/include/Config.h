@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2017 Matheus Silva
+ */
+
 #include "Consts.h"
 /* General library configuration */
 const int SIZE_OF_INT = sizeof(int);

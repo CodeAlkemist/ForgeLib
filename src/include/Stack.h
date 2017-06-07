@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2017 Matheus Silva
+ */
+
 #pragma once
 #include <stdlib.h>
 #include "Config.h"
@@ -25,7 +29,6 @@ void stack_init(Stack *stack)
 /* Increase capacity by a given number defaults to 1 */
 bool stack_resize(Stack *stack, int qty)
 {
-	qty = qty != NULL ? 1 : qty;
 	stack->capacity += qty;
 	if(stack->capacity > 0){
 		stack->data = realloc(stack->data, SIZE_OF_INT * stack->capacity);
@@ -67,7 +70,12 @@ int stack_check(Stack *stack)
 {
 	return stack->data[stack->size];
 }
-/* */
+/* Gets the size of the stack */
+int getsizeof_stack(Stack *stack)
+{
+	return stack->size;
+}
+/* Free the memory allocated to the stack passed as argument */
 void stack_free(Stack *stack)
 {
 	free(stack);
