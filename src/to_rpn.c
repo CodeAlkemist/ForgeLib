@@ -26,7 +26,7 @@ int op_precedence(char op)
 	return 0;
 }
 
-Stack to_rpn(char raw[])
+Stack to_rpn(char **raw)
 {
 	Stack out;
 	stack_init(&out);
@@ -38,7 +38,7 @@ Stack to_rpn(char raw[])
 	while (pc <= (int)sizeof(raw) - 1)
 	{
 		/* Get next char from the input */
-		char cc = raw[pc];
+		char cc = (int)raw[pc];
 		/* Check for null */
 		if (cc == 0x00) {
 

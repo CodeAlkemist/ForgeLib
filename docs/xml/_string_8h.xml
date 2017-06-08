@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_string_8h" kind="file" language="C++">
+    <compoundname>String.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="_config_8h" local="yes">Config.h</includes>
+    <incdepgraph>
+      <node id="23">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24">
+        <label>Consts.h</label>
+        <link refid="_consts_8h"/>
+      </node>
+      <node id="21">
+        <label>src/include/String.h</label>
+        <link refid="_string_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_string" prot="public">String</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_string_8h_1afae7525c43cd8862aae1e3a0a77cab3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void string_init</definition>
+        <argsstring>(String *str, bool appendnull)</argsstring>
+        <name>string_init</name>
+        <param>
+          <type><ref refid="struct_string" kindref="compound">String</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref></type>
+          <declname>appendnull</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/include/String.h" line="15" column="1" bodyfile="src/include/String.h" bodystart="15" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_config_8h" kindref="compound">Config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="struct_string" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="struct_string_1a439227feff9d7f55384e8780cfc2eb82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_string_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="11" refid="struct_string_1adbe66a087ac3fd4a5b0566f64ca2d12b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_string_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref>;</highlight></codeline>
+<codeline lineno="12" refid="struct_string_1a91a70b77df95bd8b0830b49a094c2acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct_string_1a91a70b77df95bd8b0830b49a094c2acb" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/><ref refid="struct_string" kindref="compound">String</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_string_8h_1afae7525c43cd8862aae1e3a0a77cab3e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_string_8h_1afae7525c43cd8862aae1e3a0a77cab3e" kindref="member">string_init</ref>(<ref refid="struct_string" kindref="compound">String</ref><sp/>*str,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>appendnull)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="struct_string_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="struct_string_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref><sp/>=<sp/><ref refid="_config_8h_1a7aecb9a1ccc7084b3a532e7d6b4e9211" kindref="member">STRING_INIT_SIZE</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>memory<sp/>to<sp/>the<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(appendnull<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/include/String.h"/>
+  </compounddef>
+</doxygen>

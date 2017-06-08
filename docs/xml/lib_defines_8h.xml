@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="lib_defines_8h" kind="file" language="C++">
+    <compoundname>libDefines.h</compoundname>
+    <includes refid="_stack_8h" local="yes">include\Stack.h</includes>
+    <includedby refid="to__rpn_8c" local="yes">src/to_rpn.c</includedby>
+    <incdepgraph>
+      <node id="26">
+        <label>src/libDefines.h</label>
+        <link refid="lib_defines_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>stdlib.h</label>
+      </node>
+      <node id="30">
+        <label>Consts.h</label>
+        <link refid="_consts_8h"/>
+      </node>
+      <node id="27">
+        <label>include\Stack.h</label>
+        <link refid="_stack_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="31">
+        <label>src/libDefines.h</label>
+        <link refid="lib_defines_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/to_rpn.c</label>
+        <link refid="to__rpn_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lib_defines_8h_1a1d98caa4cfb1350f4e7def4f31a09f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
+        <definition>Stack to_rpn</definition>
+        <argsstring>(char **raw)</argsstring>
+        <name>to_rpn</name>
+        <param>
+          <type>char **</type>
+          <declname>raw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copyright (c) 2017 Matheus Silva </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libDefines.h" line="8" column="1" bodyfile="src/to_rpn.c" bodystart="29" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_stack_8h" kindref="compound">include\Stack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><ref refid="lib_defines_8h_1a1d98caa4cfb1350f4e7def4f31a09f81" kindref="member">to_rpn</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**raw);</highlight></codeline>
+    </programlisting>
+    <location file="src/libDefines.h"/>
+  </compounddef>
+</doxygen>

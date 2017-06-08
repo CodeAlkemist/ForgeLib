@@ -17,4 +17,9 @@ void string_init(String *str, bool appendnull)
 	str->size = 0;
 	str->capacity = STRING_INIT_SIZE;
 
+	/* Allocate memory to the string */
+	if(appendnull == true)
+	{
+
+	}
 }

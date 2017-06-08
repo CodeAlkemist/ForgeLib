@@ -16,7 +16,8 @@ typedef struct
 	int capacity;
 	int *data;
 }Stack;
-/* Initialise the stack */
+
+/** Initialise the stack */
 void stack_init(Stack *stack)
 {
 	/* Initialise size and capacity */
@@ -26,7 +27,14 @@ void stack_init(Stack *stack)
 	/* Allocate memory */
 	stack->data = malloc(SIZE_OF_INT * stack->capacity);
 }
-/* Increase capacity by a given number defaults to 1 */
+
+/** Free the memory allocated to the stack passed as argument */
+void stack_free(Stack *stack)
+{
+	free(stack);
+}
+
+/** Increase capacity by a given number defaults to 1 */
 bool stack_resize(Stack *stack, int qty)
 {
 	stack->capacity += qty;
@@ -48,7 +56,7 @@ int stack_get_arbitrary(Stack *stack, int index)
 	}
 	return stack->data[index];
 }
-/* Push to the stack */
+/** Push to the stack */
 void stack_push(Stack *stack, int data)
 {
 	if(stack->size >= stack->capacity){
@@ -57,7 +65,7 @@ void stack_push(Stack *stack, int data)
 	/* Add data to the top of the stack */
 	stack->data[stack->size++] = data;
 }
-/* Pop from the stack */
+/** Pop from the stack */
 int stack_pop(Stack *stack)
 {
 	int tmp = stack->data[stack->size];
@@ -65,18 +73,29 @@ int stack_pop(Stack *stack)
 	stack_resize(stack, -1);
 	return tmp;
 }
-/* Gets the topmost item on the stack */
+/** Gets the topmost item on the stack */
 int stack_check(Stack *stack)
 {
 	return stack->data[stack->size];
 }
-/* Gets the size of the stack */
+/** Gets the size of the stack */
 int getsizeof_stack(Stack *stack)
 {
 	return stack->size;
 }
-/* Free the memory allocated to the stack passed as argument */
-void stack_free(Stack *stack)
+
+/**
+ * Merges stack1 into stack2
+ * Returns: nothing the resulting stack is stack2
+ */
+void stack_merge(Stack *stack1, Stack *stack2)
 {
-	free(stack);
+	if(stack1->size > 0)
+	{
+		while(stack1->size < 0)
+		{
+			stack_push(stack2, stack_pop(stack1));
+		}
+		stack_free(stack1);
+	}
 }

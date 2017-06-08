@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="to__rpn_8c" kind="file" language="C++">
+    <compoundname>to_rpn.c</compoundname>
+    <includes refid="lib_defines_8h" local="yes">libDefines.h</includes>
+    <incdepgraph>
+      <node id="34">
+        <label>libDefines.h</label>
+        <link refid="lib_defines_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>stdlib.h</label>
+      </node>
+      <node id="33">
+        <label>src/to_rpn.c</label>
+        <link refid="to__rpn_8c"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Consts.h</label>
+        <link refid="_consts_8h"/>
+      </node>
+      <node id="35">
+        <label>include\Stack.h</label>
+        <link refid="_stack_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="to__rpn_8c_1a927f53781b8bf2258ae3d94e2b54fc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int op_precedence</definition>
+        <argsstring>(char op)</argsstring>
+        <name>op_precedence</name>
+        <param>
+          <type>char</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shunting yard algorithm Copyright (c) 2017 Matheus Silva Algorithm to convert from infix notation to RPN (Postfix) Takes 2 times the size of the input in ram to work Return the operator precedence </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/to_rpn.c" line="12" column="1" bodyfile="src/to_rpn.c" bodystart="12" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="to__rpn_8c_1a1d98caa4cfb1350f4e7def4f31a09f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
+        <definition>Stack to_rpn</definition>
+        <argsstring>(char **raw)</argsstring>
+        <name>to_rpn</name>
+        <param>
+          <type>char **</type>
+          <declname>raw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copyright (c) 2017 Matheus Silva </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/to_rpn.c" line="29" column="1" bodyfile="src/to_rpn.c" bodystart="29" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_defines_8h" kindref="compound">libDefines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="to__rpn_8c_1a927f53781b8bf2258ae3d94e2b54fc2d" kindref="member">op_precedence</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>op)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(op<sp/>==<sp/>0x5E)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(op<sp/>==<sp/>0x2A<sp/>||<sp/>op<sp/>==<sp/>0x2F)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(op<sp/>==<sp/>0x2B<sp/>||<sp/>op<sp/>==<sp/>0x2D)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><ref refid="to__rpn_8c_1a1d98caa4cfb1350f4e7def4f31a09f81" kindref="member">to_rpn</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**raw)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/>out;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1abb7898de38e2bf26ab4bb9fa1872e63d" kindref="member">stack_init</ref>(&amp;out);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/>ops;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1abb7898de38e2bf26ab4bb9fa1872e63d" kindref="member">stack_init</ref>(&amp;ops);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>error<sp/>stack<sp/>just<sp/>in<sp/>case<sp/>but<sp/>left<sp/>it<sp/>uninitialised<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/>err;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pc<sp/>=<sp/>0x0000;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(pc<sp/>&lt;=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(raw)<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>next<sp/>char<sp/>from<sp/>the<sp/>input<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cc<sp/>=<sp/>(int)raw[pc];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>for<sp/>null<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cc<sp/>==<sp/>0x00)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>it<sp/>is<sp/>a<sp/>number<sp/>push<sp/>it<sp/>to<sp/>the<sp/>output<sp/>stack<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cc<sp/>&gt;=<sp/>0x30<sp/>&amp;&amp;<sp/>cc<sp/>&lt;=<sp/>0x39)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;out,<sp/>cc);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>not<sp/>check<sp/>if<sp/>it<sp/>is<sp/>an<sp/>operator*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cc<sp/>&gt;=<sp/>0x2A<sp/>&amp;&amp;<sp/>cc<sp/>&lt;=0x2F)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ops.<ref refid="struct_stack_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tsop<sp/>=<sp/><ref refid="_stack_8h_1ac5b24a79f9821527a6673b7582ae838b" kindref="member">stack_check</ref>(&amp;ops);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="to__rpn_8c_1a927f53781b8bf2258ae3d94e2b54fc2d" kindref="member">op_precedence</ref>(cc)<sp/>&gt;<sp/><ref refid="to__rpn_8c_1a927f53781b8bf2258ae3d94e2b54fc2d" kindref="member">op_precedence</ref>(tsop)<sp/>?<sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;ops,<sp/>cc)<sp/>:<sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;out,<ref refid="_stack_8h_1a86914bce7c52639297c92a086ba87581" kindref="member">stack_pop</ref>(&amp;ops));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;ops,<sp/>cc);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>if<sp/>it<sp/>is<sp/>left<sp/>parenthesis*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cc<sp/>==<sp/>0x28)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>While<sp/>there<sp/>are<sp/>operators<sp/>and<sp/>they<sp/>are<sp/>not<sp/>a<sp/>right<sp/>parenthesis<sp/>keep<sp/>popping<sp/>operators<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ops.<ref refid="struct_stack_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/><ref refid="_stack_8h_1ac5b24a79f9821527a6673b7582ae838b" kindref="member">stack_check</ref>(&amp;ops)<sp/>!=<sp/>0x29)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;out,<sp/><ref refid="_stack_8h_1a86914bce7c52639297c92a086ba87581" kindref="member">stack_pop</ref>(&amp;ops));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ops.<ref refid="struct_stack_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1abb7898de38e2bf26ab4bb9fa1872e63d" kindref="member">stack_init</ref>(&amp;err);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;err,<sp/>0xBAD1);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>it<sp/>is<sp/>the<sp/>last<sp/>character<sp/>check<sp/>if<sp/>there<sp/>are<sp/>still<sp/>any<sp/>operators<sp/>left<sp/>in<sp/>the<sp/>stack<sp/>and<sp/>pop<sp/>all<sp/>of<sp/>them<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pc<sp/>==<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(raw)<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ops.<ref refid="struct_stack_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;out,<sp/><ref refid="_stack_8h_1a86914bce7c52639297c92a086ba87581" kindref="member">stack_pop</ref>(&amp;ops));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Finally<sp/>increment<sp/>the<sp/>counter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pc++;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/to_rpn.c"/>
+  </compounddef>
+</doxygen>

@@ -2,6 +2,7 @@
  * Copyright (c) 2017 Matheus Silva
  */
 
-#include "include/Stack.h"
+#include "include\Stack.h"
 
-Stack to_rpn(char raw[]);
+
+Stack to_rpn(char **raw);
