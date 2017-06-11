@@ -1,0 +1,103 @@
+\hypertarget{_vector_8h}{}\section{src/\+Vector.h File Reference}
+\label{_vector_8h}\index{src/\+Vector.\+h@{src/\+Vector.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Config.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvector}{vector}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structvector}{vector} \hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_vector_8h_a6e0e552c591db3a0085e76874e406f6a}{vector\+\_\+init} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector}, int \hyperlink{structstack_a439227feff9d7f55384e8780cfc2eb82}{size})
+\item 
+void \hyperlink{_vector_8h_a03eaa4d3c98ea2f13f8ae6d77a07ea3e}{vector\+\_\+free} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector})
+\item 
+void \hyperlink{_vector_8h_ae761fd99c177ddda5f8b6191d0b46333}{vector\+\_\+resize} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector}, int qty)
+\item 
+void \hyperlink{_vector_8h_ac8891afc7105a03cdca286e0024f9cb7}{vector\+\_\+push} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector}, int \hyperlink{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}{data})
+\item 
+int \hyperlink{_vector_8h_a6ca8414a08539d24ebdb858cf20908c0}{vector\+\_\+pop} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector})
+\item 
+int \hyperlink{_vector_8h_ab8d088875ad28d5e9724477576d62ad3}{vector\+\_\+check} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector})
+\item 
+int \hyperlink{_vector_8h_a7e2d2ab748305748ea6ac620aee6c833}{getsizeof\+\_\+vector} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$\hyperlink{structvector}{vector})
+\item 
+void \hyperlink{_vector_8h_a5f757178547e6af0cf04418c9efa3dc5}{vector\+\_\+merge} (\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$vector1, \hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$vector2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017 Matheus Xavier Silva 
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Matheus Xavier Silva 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}\label{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}} 
+\index{Vector.\+h@{Vector.\+h}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{Vector}{Vector}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structvector}{vector} \hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_vector_8h_a7e2d2ab748305748ea6ac620aee6c833}\label{_vector_8h_a7e2d2ab748305748ea6ac620aee6c833}} 
+\index{Vector.\+h@{Vector.\+h}!getsizeof\+\_\+vector@{getsizeof\+\_\+vector}}
+\index{getsizeof\+\_\+vector@{getsizeof\+\_\+vector}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{getsizeof\+\_\+vector()}{getsizeof\_vector()}}
+{\footnotesize\ttfamily int getsizeof\+\_\+vector (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+Gets the size of the vector \mbox{\Hypertarget{_vector_8h_ab8d088875ad28d5e9724477576d62ad3}\label{_vector_8h_ab8d088875ad28d5e9724477576d62ad3}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+check@{vector\+\_\+check}}
+\index{vector\+\_\+check@{vector\+\_\+check}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+check()}{vector\_check()}}
+{\footnotesize\ttfamily int vector\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+Gets the topmost item on the vector \mbox{\Hypertarget{_vector_8h_a03eaa4d3c98ea2f13f8ae6d77a07ea3e}\label{_vector_8h_a03eaa4d3c98ea2f13f8ae6d77a07ea3e}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+free@{vector\+\_\+free}}
+\index{vector\+\_\+free@{vector\+\_\+free}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+free()}{vector\_free()}}
+{\footnotesize\ttfamily void vector\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+Free the memory allocated to the vector passed as argument \mbox{\Hypertarget{_vector_8h_a6e0e552c591db3a0085e76874e406f6a}\label{_vector_8h_a6e0e552c591db3a0085e76874e406f6a}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+init@{vector\+\_\+init}}
+\index{vector\+\_\+init@{vector\+\_\+init}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+init()}{vector\_init()}}
+{\footnotesize\ttfamily void vector\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Initialise the vector \mbox{\Hypertarget{_vector_8h_a5f757178547e6af0cf04418c9efa3dc5}\label{_vector_8h_a5f757178547e6af0cf04418c9efa3dc5}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+merge@{vector\+\_\+merge}}
+\index{vector\+\_\+merge@{vector\+\_\+merge}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+merge()}{vector\_merge()}}
+{\footnotesize\ttfamily void vector\+\_\+merge (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector1,  }\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector2 }\end{DoxyParamCaption})}
+
+Merges vector1 into vector2 Returns\+: nothing the resulting vector in vector2 \mbox{\Hypertarget{_vector_8h_a6ca8414a08539d24ebdb858cf20908c0}\label{_vector_8h_a6ca8414a08539d24ebdb858cf20908c0}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+pop@{vector\+\_\+pop}}
+\index{vector\+\_\+pop@{vector\+\_\+pop}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+pop()}{vector\_pop()}}
+{\footnotesize\ttfamily int vector\+\_\+pop (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+Pop from the vector \mbox{\Hypertarget{_vector_8h_ac8891afc7105a03cdca286e0024f9cb7}\label{_vector_8h_ac8891afc7105a03cdca286e0024f9cb7}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+push@{vector\+\_\+push}}
+\index{vector\+\_\+push@{vector\+\_\+push}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+push()}{vector\_push()}}
+{\footnotesize\ttfamily void vector\+\_\+push (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+Push to the vector \mbox{\Hypertarget{_vector_8h_ae761fd99c177ddda5f8b6191d0b46333}\label{_vector_8h_ae761fd99c177ddda5f8b6191d0b46333}} 
+\index{Vector.\+h@{Vector.\+h}!vector\+\_\+resize@{vector\+\_\+resize}}
+\index{vector\+\_\+resize@{vector\+\_\+resize}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{vector\+\_\+resize()}{vector\_resize()}}
+{\footnotesize\ttfamily void vector\+\_\+resize (\begin{DoxyParamCaption}\item[{\hyperlink{_vector_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector} $\ast$}]{vector,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+Increase capacity by a given number defaults to 1 

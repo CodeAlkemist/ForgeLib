@@ -65,21 +65,293 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">libDefines.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_stack_8h_source.html">include\Stack.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_stack_8h_source.html">Stack.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__rpn_8h_source.html">to_rpn.h</a>&quot;</code><br />
 </div>
 <p><a href="lib_defines_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a62ac01f9ebfcec6ee7ca834185e1866f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a62ac01f9ebfcec6ee7ca834185e1866f">LIB_VER</a>&#160;&#160;&#160;20170609</td></tr>
+<tr class="separator:a62ac01f9ebfcec6ee7ca834185e1866f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1d98caa4cfb1350f4e7def4f31a09f81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_stack.html">Stack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a1d98caa4cfb1350f4e7def4f31a09f81">to_rpn</a> (char **raw)</td></tr>
+<tr class="memitem:a1d98caa4cfb1350f4e7def4f31a09f81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a1d98caa4cfb1350f4e7def4f31a09f81">to_rpn</a> (char **raw)</td></tr>
 <tr class="separator:a1d98caa4cfb1350f4e7def4f31a09f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdb418b70e964383b7b0e2fbedde09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#aebdb418b70e964383b7b0e2fbedde09e">stack_init</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>, int size)</td></tr>
+<tr class="separator:aebdb418b70e964383b7b0e2fbedde09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc04d6c48f275815a5a248a37b9f30bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#afc04d6c48f275815a5a248a37b9f30bc">stack_free</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>)</td></tr>
+<tr class="separator:afc04d6c48f275815a5a248a37b9f30bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb835db0240f79f7b5c29dbee04a5f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a4eb835db0240f79f7b5c29dbee04a5f5">stack_resize</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>, int qty)</td></tr>
+<tr class="separator:a4eb835db0240f79f7b5c29dbee04a5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae041e1222c96f70d7b1a4528c3b3bf2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#ae041e1222c96f70d7b1a4528c3b3bf2c">stack_push</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>, int data)</td></tr>
+<tr class="separator:ae041e1222c96f70d7b1a4528c3b3bf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86914bce7c52639297c92a086ba87581"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a86914bce7c52639297c92a086ba87581">stack_pop</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>)</td></tr>
+<tr class="separator:a86914bce7c52639297c92a086ba87581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b24a79f9821527a6673b7582ae838b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#ac5b24a79f9821527a6673b7582ae838b">stack_check</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>)</td></tr>
+<tr class="separator:ac5b24a79f9821527a6673b7582ae838b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f99bec6acb65ce01f2079dc1ea2c117"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#a1f99bec6acb65ce01f2079dc1ea2c117">getsizeof_stack</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *<a class="el" href="structstack.html">stack</a>)</td></tr>
+<tr class="separator:a1f99bec6acb65ce01f2079dc1ea2c117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac631668285b65b180672342a757df994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_defines_8h.html#ac631668285b65b180672342a757df994">stack_merge</a> (<a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *stack1, <a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *stack2)</td></tr>
+<tr class="separator:ac631668285b65b180672342a757df994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a62ac01f9ebfcec6ee7ca834185e1866f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ac01f9ebfcec6ee7ca834185e1866f">&#9670;&nbsp;</a></span>LIB_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIB_VER&#160;&#160;&#160;20170609</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copyright (c) 2017 Matheus Silva </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a1f99bec6acb65ce01f2079dc1ea2c117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f99bec6acb65ce01f2079dc1ea2c117">&#9670;&nbsp;</a></span>getsizeof_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getsizeof_stack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the size of the stack </p>
+
+</div>
+</div>
+<a id="ac5b24a79f9821527a6673b7582ae838b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b24a79f9821527a6673b7582ae838b">&#9670;&nbsp;</a></span>stack_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stack_check </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="afc04d6c48f275815a5a248a37b9f30bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc04d6c48f275815a5a248a37b9f30bc">&#9670;&nbsp;</a></span>stack_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stack_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebdb418b70e964383b7b0e2fbedde09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebdb418b70e964383b7b0e2fbedde09e">&#9670;&nbsp;</a></span>stack_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stack_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialises the stack with a given size </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>the stack to initialise </td></tr>
+    <tr><td class="paramname">size</td><td>size to initialise the stack with </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac631668285b65b180672342a757df994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac631668285b65b180672342a757df994">&#9670;&nbsp;</a></span>stack_merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stack_merge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack1</td><td></td></tr>
+    <tr><td class="paramname">stack2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86914bce7c52639297c92a086ba87581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86914bce7c52639297c92a086ba87581">&#9670;&nbsp;</a></span>stack_pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stack_pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ae041e1222c96f70d7b1a4528c3b3bf2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae041e1222c96f70d7b1a4528c3b3bf2c">&#9670;&nbsp;</a></span>stack_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stack_push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td></td></tr>
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4eb835db0240f79f7b5c29dbee04a5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb835db0240f79f7b5c29dbee04a5f5">&#9670;&nbsp;</a></span>stack_resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stack_resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td></td></tr>
+    <tr><td class="paramname">size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1d98caa4cfb1350f4e7def4f31a09f81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d98caa4cfb1350f4e7def4f31a09f81">&#9670;&nbsp;</a></span>to_rpn()</h2>
 
@@ -87,7 +359,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_stack.html">Stack</a> to_rpn </td>
+          <td class="memname"><a class="el" href="_stack_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> to_rpn </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>raw</em></td><td>)</td>
@@ -95,7 +367,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copyright (c) 2017 Matheus Silva </p>
 
 </div>
 </div>

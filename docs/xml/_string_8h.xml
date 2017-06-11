@@ -5,26 +5,26 @@
     <includes local="no">stdlib.h</includes>
     <includes refid="_config_8h" local="yes">Config.h</includes>
     <incdepgraph>
-      <node id="23">
-        <label>Config.h</label>
-        <link refid="_config_8h"/>
-        <childnode refid="24" relation="include">
+      <node id="34">
+        <label>src/String.h</label>
+        <link refid="_string_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="35">
         <label>stdlib.h</label>
       </node>
-      <node id="24">
+      <node id="36">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
         <label>Consts.h</label>
         <link refid="_consts_8h"/>
-      </node>
-      <node id="21">
-        <label>src/include/String.h</label>
-        <link refid="_string_8h"/>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="struct_string" prot="public">String</innerclass>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/include/String.h" line="15" column="1" bodyfile="src/include/String.h" bodystart="15" bodyend="25"/>
+        <location file="src/String.h" line="15" column="1" bodyfile="src/String.h" bodystart="15" bodyend="25"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -79,6 +79,6 @@
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/include/String.h"/>
+    <location file="src/String.h"/>
   </compounddef>
 </doxygen>

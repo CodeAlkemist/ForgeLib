@@ -4,7 +4,6 @@
  * Takes 2 times the size of the input in ram to work
  */
 
-#include "libDefines.h"
 
 /**
  * Return the operator precedence
@@ -29,9 +28,9 @@ int op_precedence(char op)
 Stack to_rpn(char **raw)
 {
 	Stack out;
-	stack_init(&out);
+	stack_init(&out, (int)sizeof(raw));
 	Stack ops;
-	stack_init(&ops);
+	stack_init(&ops, 10);
 	/* Create error stack just in case but left it uninitialised */
 	Stack err;
 	int pc = 0x0000;
@@ -71,7 +70,7 @@ Stack to_rpn(char **raw)
 			}
 			if(ops.size == 0)
 			{
-				stack_init(&err);
+				stack_init(&err, 10);
 				stack_push(&err, 0xBAD1);
 				return err;
 			}

@@ -1,18 +1,145 @@
 \hypertarget{lib_defines_8h}{}\section{src/lib\+Defines.h File Reference}
 \label{lib_defines_8h}\index{src/lib\+Defines.\+h@{src/lib\+Defines.\+h}}
-{\ttfamily \#include \char`\"{}include\textbackslash{}\+Stack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Stack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}to\+\_\+rpn.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lib_defines_8h_a62ac01f9ebfcec6ee7ca834185e1866f}{L\+I\+B\+\_\+\+V\+ER}~20170609
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_stack}{Stack} \hyperlink{lib_defines_8h_a1d98caa4cfb1350f4e7def4f31a09f81}{to\+\_\+rpn} (char $\ast$$\ast$raw)
+\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} \hyperlink{lib_defines_8h_a1d98caa4cfb1350f4e7def4f31a09f81}{to\+\_\+rpn} (char $\ast$$\ast$raw)
+\item 
+void \hyperlink{lib_defines_8h_aebdb418b70e964383b7b0e2fbedde09e}{stack\+\_\+init} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int size)
+\item 
+void \hyperlink{lib_defines_8h_afc04d6c48f275815a5a248a37b9f30bc}{stack\+\_\+free} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+void \hyperlink{lib_defines_8h_a4eb835db0240f79f7b5c29dbee04a5f5}{stack\+\_\+resize} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int qty)
+\item 
+void \hyperlink{lib_defines_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}{stack\+\_\+push} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int data)
+\item 
+int \hyperlink{lib_defines_8h_a86914bce7c52639297c92a086ba87581}{stack\+\_\+pop} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+int \hyperlink{lib_defines_8h_ac5b24a79f9821527a6673b7582ae838b}{stack\+\_\+check} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+int \hyperlink{lib_defines_8h_a1f99bec6acb65ce01f2079dc1ea2c117}{getsizeof\+\_\+stack} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+void \hyperlink{lib_defines_8h_ac631668285b65b180672342a757df994}{stack\+\_\+merge} (\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$stack1, \hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$stack2)
 \end{DoxyCompactItemize}
 
 
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lib_defines_8h_a62ac01f9ebfcec6ee7ca834185e1866f}\label{lib_defines_8h_a62ac01f9ebfcec6ee7ca834185e1866f}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!L\+I\+B\+\_\+\+V\+ER@{L\+I\+B\+\_\+\+V\+ER}}
+\index{L\+I\+B\+\_\+\+V\+ER@{L\+I\+B\+\_\+\+V\+ER}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+B\+\_\+\+V\+ER}{LIB\_VER}}
+{\footnotesize\ttfamily \#define L\+I\+B\+\_\+\+V\+ER~20170609}
+
+Copyright (c) 2017 Matheus Silva 
+
 \subsection{Function Documentation}
+\mbox{\Hypertarget{lib_defines_8h_a1f99bec6acb65ce01f2079dc1ea2c117}\label{lib_defines_8h_a1f99bec6acb65ce01f2079dc1ea2c117}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!getsizeof\+\_\+stack@{getsizeof\+\_\+stack}}
+\index{getsizeof\+\_\+stack@{getsizeof\+\_\+stack}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{getsizeof\+\_\+stack()}{getsizeof\_stack()}}
+{\footnotesize\ttfamily int getsizeof\+\_\+stack (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+Gets the size of the stack \mbox{\Hypertarget{lib_defines_8h_ac5b24a79f9821527a6673b7582ae838b}\label{lib_defines_8h_ac5b24a79f9821527a6673b7582ae838b}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+check@{stack\+\_\+check}}
+\index{stack\+\_\+check@{stack\+\_\+check}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+check()}{stack\_check()}}
+{\footnotesize\ttfamily int stack\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{lib_defines_8h_afc04d6c48f275815a5a248a37b9f30bc}\label{lib_defines_8h_afc04d6c48f275815a5a248a37b9f30bc}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+free@{stack\+\_\+free}}
+\index{stack\+\_\+free@{stack\+\_\+free}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+free()}{stack\_free()}}
+{\footnotesize\ttfamily void stack\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lib_defines_8h_aebdb418b70e964383b7b0e2fbedde09e}\label{lib_defines_8h_aebdb418b70e964383b7b0e2fbedde09e}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+init@{stack\+\_\+init}}
+\index{stack\+\_\+init@{stack\+\_\+init}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+init()}{stack\_init()}}
+{\footnotesize\ttfamily void stack\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Initialises the stack with a given size 
+\begin{DoxyParams}{Parameters}
+{\em stack} & the stack to initialise \\
+\hline
+{\em size} & size to initialise the stack with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lib_defines_8h_ac631668285b65b180672342a757df994}\label{lib_defines_8h_ac631668285b65b180672342a757df994}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+merge@{stack\+\_\+merge}}
+\index{stack\+\_\+merge@{stack\+\_\+merge}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+merge()}{stack\_merge()}}
+{\footnotesize\ttfamily void stack\+\_\+merge (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack1,  }\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack1} & \\
+\hline
+{\em stack2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lib_defines_8h_a86914bce7c52639297c92a086ba87581}\label{lib_defines_8h_a86914bce7c52639297c92a086ba87581}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+pop@{stack\+\_\+pop}}
+\index{stack\+\_\+pop@{stack\+\_\+pop}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+pop()}{stack\_pop()}}
+{\footnotesize\ttfamily int stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{lib_defines_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}\label{lib_defines_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+push@{stack\+\_\+push}}
+\index{stack\+\_\+push@{stack\+\_\+push}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+push()}{stack\_push()}}
+{\footnotesize\ttfamily void stack\+\_\+push (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lib_defines_8h_a4eb835db0240f79f7b5c29dbee04a5f5}\label{lib_defines_8h_a4eb835db0240f79f7b5c29dbee04a5f5}} 
+\index{lib\+Defines.\+h@{lib\+Defines.\+h}!stack\+\_\+resize@{stack\+\_\+resize}}
+\index{stack\+\_\+resize@{stack\+\_\+resize}!lib\+Defines.\+h@{lib\+Defines.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+resize()}{stack\_resize()}}
+{\footnotesize\ttfamily void stack\+\_\+resize (\begin{DoxyParamCaption}\item[{\hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{lib_defines_8h_a1d98caa4cfb1350f4e7def4f31a09f81}\label{lib_defines_8h_a1d98caa4cfb1350f4e7def4f31a09f81}} 
 \index{lib\+Defines.\+h@{lib\+Defines.\+h}!to\+\_\+rpn@{to\+\_\+rpn}}
 \index{to\+\_\+rpn@{to\+\_\+rpn}!lib\+Defines.\+h@{lib\+Defines.\+h}}
 \subsubsection{\texorpdfstring{to\+\_\+rpn()}{to\_rpn()}}
-{\footnotesize\ttfamily \hyperlink{struct_stack}{Stack} to\+\_\+rpn (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{raw }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{_stack_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack} to\+\_\+rpn (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{raw }\end{DoxyParamCaption})}
 
-Copyright (c) 2017 Matheus Silva 

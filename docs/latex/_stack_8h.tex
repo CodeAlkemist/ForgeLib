@@ -1,88 +1,46 @@
-\hypertarget{_stack_8h}{}\section{src/include/\+Stack.h File Reference}
-\label{_stack_8h}\index{src/include/\+Stack.\+h@{src/include/\+Stack.\+h}}
+\hypertarget{_stack_8h}{}\section{src/\+Stack.h File Reference}
+\label{_stack_8h}\index{src/\+Stack.\+h@{src/\+Stack.\+h}}
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}Config.\+h\char`\"{}}\newline
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{struct_stack}{Stack}
-\end{DoxyCompactItemize}
+struct \hyperlink{structstack}{stack}
+\begin{DoxyCompactList}\small\item\em Standard F\+I\+LO stack with a traverse function to get any specific index. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{_stack_8h_abb7898de38e2bf26ab4bb9fa1872e63d}{stack\+\_\+init} (\hyperlink{struct_stack}{Stack} $\ast$stack)
-\item 
-void \hyperlink{_stack_8h_afc04d6c48f275815a5a248a37b9f30bc}{stack\+\_\+free} (\hyperlink{struct_stack}{Stack} $\ast$stack)
-\item 
-\hyperlink{_consts_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{_stack_8h_ac726bfaf88914a92a2a2232a855d5641}{stack\+\_\+resize} (\hyperlink{struct_stack}{Stack} $\ast$stack, int qty)
-\item 
-int \hyperlink{_stack_8h_a9b04b30c135696d611c05092a429e961}{stack\+\_\+get\+\_\+arbitrary} (\hyperlink{struct_stack}{Stack} $\ast$stack, int index)
-\item 
-void \hyperlink{_stack_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}{stack\+\_\+push} (\hyperlink{struct_stack}{Stack} $\ast$stack, int data)
-\item 
-int \hyperlink{_stack_8h_a86914bce7c52639297c92a086ba87581}{stack\+\_\+pop} (\hyperlink{struct_stack}{Stack} $\ast$stack)
-\item 
-int \hyperlink{_stack_8h_ac5b24a79f9821527a6673b7582ae838b}{stack\+\_\+check} (\hyperlink{struct_stack}{Stack} $\ast$stack)
-\item 
-int \hyperlink{_stack_8h_a1f99bec6acb65ce01f2079dc1ea2c117}{getsizeof\+\_\+stack} (\hyperlink{struct_stack}{Stack} $\ast$stack)
-\item 
-void \hyperlink{_stack_8h_ac631668285b65b180672342a757df994}{stack\+\_\+merge} (\hyperlink{struct_stack}{Stack} $\ast$stack1, \hyperlink{struct_stack}{Stack} $\ast$stack2)
-\end{DoxyCompactItemize}
+int \hyperlink{_stack_8h_a06c1a54401a1d72a30affd4d321948e6}{stack\+\_\+traverse} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int index)
+\begin{DoxyCompactList}\small\item\em Traverse the stack to the desired index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017 Matheus Xavier Silva 
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Matheus Xavier Silva 
+\end{DoxyAuthor}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{_stack_8h_a1f99bec6acb65ce01f2079dc1ea2c117}\label{_stack_8h_a1f99bec6acb65ce01f2079dc1ea2c117}} 
-\index{Stack.\+h@{Stack.\+h}!getsizeof\+\_\+stack@{getsizeof\+\_\+stack}}
-\index{getsizeof\+\_\+stack@{getsizeof\+\_\+stack}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{getsizeof\+\_\+stack()}{getsizeof\_stack()}}
-{\footnotesize\ttfamily int getsizeof\+\_\+stack (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_stack_8h_a06c1a54401a1d72a30affd4d321948e6}\label{_stack_8h_a06c1a54401a1d72a30affd4d321948e6}} 
+\index{Stack.\+h@{Stack.\+h}!stack\+\_\+traverse@{stack\+\_\+traverse}}
+\index{stack\+\_\+traverse@{stack\+\_\+traverse}!Stack.\+h@{Stack.\+h}}
+\subsubsection{\texorpdfstring{stack\+\_\+traverse()}{stack\_traverse()}}
+{\footnotesize\ttfamily int stack\+\_\+traverse (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{index }\end{DoxyParamCaption})}
 
-Gets the size of the stack \mbox{\Hypertarget{_stack_8h_ac5b24a79f9821527a6673b7582ae838b}\label{_stack_8h_ac5b24a79f9821527a6673b7582ae838b}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+check@{stack\+\_\+check}}
-\index{stack\+\_\+check@{stack\+\_\+check}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+check()}{stack\_check()}}
-{\footnotesize\ttfamily int stack\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
 
-Gets the topmost item on the stack \mbox{\Hypertarget{_stack_8h_afc04d6c48f275815a5a248a37b9f30bc}\label{_stack_8h_afc04d6c48f275815a5a248a37b9f30bc}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+free@{stack\+\_\+free}}
-\index{stack\+\_\+free@{stack\+\_\+free}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+free()}{stack\_free()}}
-{\footnotesize\ttfamily void stack\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
 
-Free the memory allocated to the stack passed as argument \mbox{\Hypertarget{_stack_8h_a9b04b30c135696d611c05092a429e961}\label{_stack_8h_a9b04b30c135696d611c05092a429e961}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+get\+\_\+arbitrary@{stack\+\_\+get\+\_\+arbitrary}}
-\index{stack\+\_\+get\+\_\+arbitrary@{stack\+\_\+get\+\_\+arbitrary}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+get\+\_\+arbitrary()}{stack\_get\_arbitrary()}}
-{\footnotesize\ttfamily int stack\+\_\+get\+\_\+arbitrary (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack,  }\item[{int}]{index }\end{DoxyParamCaption})}
+Traverse the stack to the desired index. 
 
-Get a value at an arbitrary index of the stack this is not part of the general concept of a stack and this function will be slower to run than pop \mbox{\Hypertarget{_stack_8h_abb7898de38e2bf26ab4bb9fa1872e63d}\label{_stack_8h_abb7898de38e2bf26ab4bb9fa1872e63d}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+init@{stack\+\_\+init}}
-\index{stack\+\_\+init@{stack\+\_\+init}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+init()}{stack\_init()}}
-{\footnotesize\ttfamily void stack\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
 
-Initialise the stack \mbox{\Hypertarget{_stack_8h_ac631668285b65b180672342a757df994}\label{_stack_8h_ac631668285b65b180672342a757df994}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+merge@{stack\+\_\+merge}}
-\index{stack\+\_\+merge@{stack\+\_\+merge}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+merge()}{stack\_merge()}}
-{\footnotesize\ttfamily void stack\+\_\+merge (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack1,  }\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack2 }\end{DoxyParamCaption})}
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 
-Merges stack1 into stack2 Returns\+: nothing the resulting stack is stack2 \mbox{\Hypertarget{_stack_8h_a86914bce7c52639297c92a086ba87581}\label{_stack_8h_a86914bce7c52639297c92a086ba87581}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+pop@{stack\+\_\+pop}}
-\index{stack\+\_\+pop@{stack\+\_\+pop}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+pop()}{stack\_pop()}}
-{\footnotesize\ttfamily int stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
-
-Pop from the stack \mbox{\Hypertarget{_stack_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}\label{_stack_8h_ae041e1222c96f70d7b1a4528c3b3bf2c}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+push@{stack\+\_\+push}}
-\index{stack\+\_\+push@{stack\+\_\+push}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+push()}{stack\_push()}}
-{\footnotesize\ttfamily void stack\+\_\+push (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack,  }\item[{int}]{data }\end{DoxyParamCaption})}
-
-Push to the stack \mbox{\Hypertarget{_stack_8h_ac726bfaf88914a92a2a2232a855d5641}\label{_stack_8h_ac726bfaf88914a92a2a2232a855d5641}} 
-\index{Stack.\+h@{Stack.\+h}!stack\+\_\+resize@{stack\+\_\+resize}}
-\index{stack\+\_\+resize@{stack\+\_\+resize}!Stack.\+h@{Stack.\+h}}
-\subsubsection{\texorpdfstring{stack\+\_\+resize()}{stack\_resize()}}
-{\footnotesize\ttfamily \hyperlink{_consts_8h_af6a258d8f3ee5206d682d799316314b1}{bool} stack\+\_\+resize (\begin{DoxyParamCaption}\item[{\hyperlink{struct_stack}{Stack} $\ast$}]{stack,  }\item[{int}]{qty }\end{DoxyParamCaption})}
-
-Increase capacity by a given number defaults to 1 
+\end{DoxyReturn}

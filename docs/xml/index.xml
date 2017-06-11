@@ -1,14 +1,32 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
-  <compound refid="struct_stack" kind="struct"><name>Stack</name>
-    <member refid="struct_stack_1a439227feff9d7f55384e8780cfc2eb82" kind="variable"><name>size</name></member>
-    <member refid="struct_stack_1adbe66a087ac3fd4a5b0566f64ca2d12b" kind="variable"><name>capacity</name></member>
-    <member refid="struct_stack_1ac103627c1ad15cbec2f22d0abe6d54b6" kind="variable"><name>data</name></member>
+  <compound refid="structstack" kind="struct"><name>stack</name>
+    <member refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kind="typedef"><name>Stack</name></member>
+    <member refid="structstack_1a2679cd033e6388e644c68ded9ce1fba4" kind="variable"><name>popc</name></member>
+    <member refid="structstack_1af93f4f37fc2ad9c37af4a715423b110c" kind="variable"><name>top</name></member>
+    <member refid="structstack_1a439227feff9d7f55384e8780cfc2eb82" kind="variable"><name>size</name></member>
+    <member refid="structstack_1adbe66a087ac3fd4a5b0566f64ca2d12b" kind="variable"><name>capacity</name></member>
+    <member refid="structstack_1ac103627c1ad15cbec2f22d0abe6d54b6" kind="variable"><name>data</name></member>
+    <member refid="structstack_1aebdb418b70e964383b7b0e2fbedde09e" kind="function"><name>stack_init</name></member>
+    <member refid="structstack_1afc04d6c48f275815a5a248a37b9f30bc" kind="function"><name>stack_free</name></member>
+    <member refid="structstack_1ac04939a837a201ef916b8df6886d939a" kind="function"><name>stack_resize</name></member>
+    <member refid="structstack_1ae041e1222c96f70d7b1a4528c3b3bf2c" kind="function"><name>stack_push</name></member>
+    <member refid="structstack_1a86914bce7c52639297c92a086ba87581" kind="function"><name>stack_pop</name></member>
+    <member refid="structstack_1ac5b24a79f9821527a6673b7582ae838b" kind="function"><name>stack_check</name></member>
+    <member refid="structstack_1a1f99bec6acb65ce01f2079dc1ea2c117" kind="function"><name>getsizeof_stack</name></member>
+    <member refid="structstack_1ac631668285b65b180672342a757df994" kind="function"><name>stack_merge</name></member>
   </compound>
   <compound refid="struct_string" kind="struct"><name>String</name>
     <member refid="struct_string_1a439227feff9d7f55384e8780cfc2eb82" kind="variable"><name>size</name></member>
     <member refid="struct_string_1adbe66a087ac3fd4a5b0566f64ca2d12b" kind="variable"><name>capacity</name></member>
     <member refid="struct_string_1a91a70b77df95bd8b0830b49a094c2acb" kind="variable"><name>data</name></member>
+  </compound>
+  <compound refid="structvector" kind="struct"><name>vector</name>
+    <member refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" kind="variable"><name>popc</name></member>
+    <member refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kind="variable"><name>top</name></member>
+    <member refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kind="variable"><name>size</name></member>
+    <member refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kind="variable"><name>capacity</name></member>
+    <member refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kind="variable"><name>data</name></member>
   </compound>
   <compound refid="_config_8h" kind="file"><name>Config.h</name>
     <member refid="_config_8h_1a3afff225364d8bab65b41401048edeb3" kind="define"><name>STACK_INIT_SIZE</name></member>
@@ -24,28 +42,47 @@
     <member refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kind="enumvalue"><name>true</name></member>
     <member refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c" kind="enumvalue"><name>false</name></member>
   </compound>
+  <compound refid="diagnostic_8c" kind="file"><name>diagnostic.c</name>
+    <member refid="diagnostic_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="libforge_8h" kind="file"><name>libforge.h</name>
+    <member refid="libforge_8h_1a62ac01f9ebfcec6ee7ca834185e1866f" kind="define"><name>LIB_VER</name></member>
+    <member refid="libforge_8h_1a1d98caa4cfb1350f4e7def4f31a09f81" kind="function"><name>to_rpn</name></member>
+    <member refid="libforge_8h_1aebdb418b70e964383b7b0e2fbedde09e" kind="function"><name>stack_init</name></member>
+    <member refid="libforge_8h_1afc04d6c48f275815a5a248a37b9f30bc" kind="function"><name>stack_free</name></member>
+    <member refid="libforge_8h_1a4eb835db0240f79f7b5c29dbee04a5f5" kind="function"><name>stack_resize</name></member>
+    <member refid="libforge_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kind="function"><name>stack_push</name></member>
+    <member refid="libforge_8h_1a86914bce7c52639297c92a086ba87581" kind="function"><name>stack_pop</name></member>
+    <member refid="libforge_8h_1ac5b24a79f9821527a6673b7582ae838b" kind="function"><name>stack_check</name></member>
+    <member refid="libforge_8h_1a1f99bec6acb65ce01f2079dc1ea2c117" kind="function"><name>getsizeof_stack</name></member>
+    <member refid="libforge_8h_1ac631668285b65b180672342a757df994" kind="function"><name>stack_merge</name></member>
+    <member refid="libforge_8h_1a579bbe89ce93ce514ac54e38d6f33693" kind="function"><name>stack_traverse</name></member>
+  </compound>
   <compound refid="_stack_8h" kind="file"><name>Stack.h</name>
-    <member refid="_stack_8h_1abb7898de38e2bf26ab4bb9fa1872e63d" kind="function"><name>stack_init</name></member>
-    <member refid="_stack_8h_1afc04d6c48f275815a5a248a37b9f30bc" kind="function"><name>stack_free</name></member>
-    <member refid="_stack_8h_1ac726bfaf88914a92a2a2232a855d5641" kind="function"><name>stack_resize</name></member>
-    <member refid="_stack_8h_1a9b04b30c135696d611c05092a429e961" kind="function"><name>stack_get_arbitrary</name></member>
-    <member refid="_stack_8h_1ae041e1222c96f70d7b1a4528c3b3bf2c" kind="function"><name>stack_push</name></member>
-    <member refid="_stack_8h_1a86914bce7c52639297c92a086ba87581" kind="function"><name>stack_pop</name></member>
-    <member refid="_stack_8h_1ac5b24a79f9821527a6673b7582ae838b" kind="function"><name>stack_check</name></member>
-    <member refid="_stack_8h_1a1f99bec6acb65ce01f2079dc1ea2c117" kind="function"><name>getsizeof_stack</name></member>
-    <member refid="_stack_8h_1ac631668285b65b180672342a757df994" kind="function"><name>stack_merge</name></member>
+    <member refid="_stack_8h_1a06c1a54401a1d72a30affd4d321948e6" kind="function"><name>stack_traverse</name></member>
   </compound>
   <compound refid="_string_8h" kind="file"><name>String.h</name>
     <member refid="_string_8h_1afae7525c43cd8862aae1e3a0a77cab3e" kind="function"><name>string_init</name></member>
   </compound>
-  <compound refid="lib_defines_8h" kind="file"><name>libDefines.h</name>
-    <member refid="lib_defines_8h_1a1d98caa4cfb1350f4e7def4f31a09f81" kind="function"><name>to_rpn</name></member>
+  <compound refid="_test_8c" kind="file"><name>Test.c</name>
+    <member refid="_test_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="to__rpn_8c" kind="file"><name>to_rpn.c</name>
-    <member refid="to__rpn_8c_1a927f53781b8bf2258ae3d94e2b54fc2d" kind="function"><name>op_precedence</name></member>
-    <member refid="to__rpn_8c_1a1d98caa4cfb1350f4e7def4f31a09f81" kind="function"><name>to_rpn</name></member>
+  <compound refid="to__rpn_8h" kind="file"><name>to_rpn.h</name>
+    <member refid="to__rpn_8h_1a927f53781b8bf2258ae3d94e2b54fc2d" kind="function"><name>op_precedence</name></member>
+    <member refid="to__rpn_8h_1a1d98caa4cfb1350f4e7def4f31a09f81" kind="function"><name>to_rpn</name></member>
   </compound>
-  <compound refid="dir_b0856f6b0d80ccb263b2f415c91f9e17" kind="dir"><name>src/include</name>
+  <compound refid="_vector_8h" kind="file"><name>Vector.h</name>
+    <member refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kind="typedef"><name>Vector</name></member>
+    <member refid="_vector_8h_1a6e0e552c591db3a0085e76874e406f6a" kind="function"><name>vector_init</name></member>
+    <member refid="_vector_8h_1a03eaa4d3c98ea2f13f8ae6d77a07ea3e" kind="function"><name>vector_free</name></member>
+    <member refid="_vector_8h_1ae761fd99c177ddda5f8b6191d0b46333" kind="function"><name>vector_resize</name></member>
+    <member refid="_vector_8h_1ac8891afc7105a03cdca286e0024f9cb7" kind="function"><name>vector_push</name></member>
+    <member refid="_vector_8h_1a6ca8414a08539d24ebdb858cf20908c0" kind="function"><name>vector_pop</name></member>
+    <member refid="_vector_8h_1ab8d088875ad28d5e9724477576d62ad3" kind="function"><name>vector_check</name></member>
+    <member refid="_vector_8h_1a7e2d2ab748305748ea6ac620aee6c833" kind="function"><name>getsizeof_vector</name></member>
+    <member refid="_vector_8h_1a5f757178547e6af0cf04418c9efa3dc5" kind="function"><name>vector_merge</name></member>
+  </compound>
+  <compound refid="deprecated" kind="page"><name>deprecated</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

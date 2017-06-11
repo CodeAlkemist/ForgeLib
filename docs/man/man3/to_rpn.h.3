@@ -1,0 +1,30 @@
+.TH "src/to_rpn.h" 3 "Fri Jun 9 2017" "Version 0.0.1" "ForgeLib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/to_rpn.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'libDefines\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBop_precedence\fP (char op)"
+.br
+.ti -1c
+.RI "\fBStack\fP \fBto_rpn\fP (char **raw)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int op_precedence (char op)"
+Shunting yard algorithm Copyright (c) 2017 Matheus Silva Algorithm to convert from infix notation to RPN (Postfix) Takes 2 times the size of the input in ram to work Return the operator precedence 
+.SS "\fBStack\fP to_rpn (char ** raw)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ForgeLib from the source code\&.

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_test_8c" kind="file" language="C++">
+    <compoundname>Test.c</compoundname>
+    <includes local="yes">libDefines.h</includes>
+    <includes local="yes">stdlib.h</includes>
+    <includes local="yes">stdio.h</includes>
+    <incdepgraph>
+      <node id="41">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39">
+        <label>src/Test.c</label>
+        <link refid="_test_8c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>libDefines.h</label>
+      </node>
+      <node id="42">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_test_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Test.c" line="5" column="1" bodyfile="src/Test.c" bodystart="5" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;libDefines.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdlib.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_test_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Forge<sp/>Diagnostic<sp/>Tool<sp/>(c)<sp/>2017<sp/>Matheus<sp/>Xavier<sp/>Silva<sp/>All<sp/>Rights<sp/>Reserved\nInitialising<sp/>testing\nProcceed?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>getchar();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref><sp/>test;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstack_1aebdb418b70e964383b7b0e2fbedde09e" kindref="member">stack_init</ref>(&amp;test,<sp/>255);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>255;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structstack_1ae041e1222c96f70d7b1a4528c3b3bf2c" kindref="member">stack_push</ref>(&amp;test,<sp/>a);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%04i<sp/><sp/><sp/><sp/>0x%08X<sp/>:<sp/>0x%08X<sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal">,<sp/>lc,<sp/>i,<sp/>a);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc++;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a++;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n=============================================\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;finished<sp/>pushing<sp/>stack<sp/>top<sp/>:<sp/>%i<sp/>|<sp/>size:<sp/>%i<sp/>|<sp/>capacity:<sp/>%i<sp/>|<sp/>version:<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>test.top,<sp/>test.size,<sp/>test.capacity,<sp/><ref refid="libforge_8h_1a62ac01f9ebfcec6ee7ca834185e1866f" kindref="member">LIB_VER</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n---------------------------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;started<sp/>popping<sp/>stack<sp/>top<sp/>:<sp/>%i<sp/>|<sp/>size:<sp/>%i<sp/>|<sp/>capacity:<sp/>%i<sp/>|<sp/>version:<sp/>%i<sp/>|<sp/>data<sp/>at<sp/>top:<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>test.top,<sp/>test.size,<sp/>test.capacity,<sp/><ref refid="libforge_8h_1a62ac01f9ebfcec6ee7ca834185e1866f" kindref="member">LIB_VER</ref>,<sp/>test.data[test.top]);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n*********************************************\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>getchar();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b[test.size];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>lc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(test.size<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b[i2]<sp/>=<sp/><ref refid="structstack_1a86914bce7c52639297c92a086ba87581" kindref="member">stack_pop</ref>(&amp;test);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%04i<sp/><sp/><sp/><sp/>0x%08X<sp/>:<sp/>0x%08X<sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal">,<sp/>lc,<sp/>i2,<sp/>b[i2]);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++i2;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc++;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;finished<sp/>popping<sp/>stack<sp/>top<sp/>:<sp/>%i<sp/>|<sp/>size:<sp/>%i<sp/>|<sp/>capacity:<sp/>%i<sp/>|<sp/>version:<sp/>%i<sp/>|<sp/>data<sp/>at<sp/>top(expect<sp/>garbage):<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>test.top,<sp/>test.size,<sp/>test.capacity,<sp/><ref refid="libforge_8h_1a62ac01f9ebfcec6ee7ca834185e1866f" kindref="member">LIB_VER</ref>,<sp/>test.data[test.top]);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structstack_1afc04d6c48f275815a5a248a37b9f30bc" kindref="member">stack_free</ref>(&amp;test);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Test.c"/>
+  </compounddef>
+</doxygen>

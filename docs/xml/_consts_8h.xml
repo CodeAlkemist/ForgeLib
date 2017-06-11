@@ -2,41 +2,41 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="_consts_8h" kind="file" language="C++">
     <compoundname>Consts.h</compoundname>
-    <includedby refid="_config_8h" local="yes">src/include/Config.h</includedby>
+    <includedby refid="_config_8h" local="yes">src/Config.h</includedby>
     <invincdepgraph>
-      <node id="11">
-        <label>src/libDefines.h</label>
-        <link refid="lib_defines_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
+      <node id="12">
+        <label>src/String.h</label>
+        <link refid="_string_8h"/>
       </node>
       <node id="9">
-        <label>src/include/Config.h</label>
+        <label>src/Config.h</label>
         <link refid="_config_8h"/>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>src/to_rpn.c</label>
-        <link refid="to__rpn_8c"/>
-      </node>
       <node id="8">
-        <label>src/include/Consts.h</label>
+        <label>src/Consts.h</label>
         <link refid="_consts_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="13">
-        <label>src/include/String.h</label>
-        <link refid="_string_8h"/>
-      </node>
       <node id="10">
-        <label>src/include/Stack.h</label>
+        <label>src/Stack.h</label>
         <link refid="_stack_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
+      </node>
+      <node id="11">
+        <label>src/libforge.h</label>
+        <link refid="libforge_8h"/>
+      </node>
+      <node id="13">
+        <label>src/Vector.h</label>
+        <link refid="_vector_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -49,7 +49,7 @@
 <para>Copyright (c) 2017 Matheus Silva </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/include/Consts.h" line="6" column="9" bodyfile="src/include/Consts.h" bodystart="6" bodyend="-1"/>
+        <location file="src/Consts.h" line="6" column="9" bodyfile="src/Consts.h" bodystart="6" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/include/Consts.h" line="8" column="1" bodyfile="src/include/Consts.h" bodystart="8" bodyend="11"/>
+        <location file="src/Consts.h" line="8" column="1" bodyfile="src/Consts.h" bodystart="8" bodyend="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -94,6 +94,6 @@
 <codeline lineno="10" refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>=<sp/>0</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}<ref refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref>;</highlight></codeline>
     </programlisting>
-    <location file="src/include/Consts.h"/>
+    <location file="src/Consts.h"/>
   </compounddef>
 </doxygen>

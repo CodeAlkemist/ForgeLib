@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structstack" kind="struct" language="C++" prot="public">
+    <compoundname>stack</compoundname>
+    <includes refid="_stack_8h" local="no">Stack.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structstack_1aa7883e8bf747b9dedec990b539df2cc0" prot="public" static="no">
+        <type>struct <ref refid="structstack" kindref="compound">stack</ref></type>
+        <definition>typedef struct stack Stack</definition>
+        <argsstring></argsstring>
+        <name>Stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="29" column="1" bodyfile="src/Stack.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstack_1a2679cd033e6388e644c68ded9ce1fba4" prot="public" static="no" mutable="no">
+        <type><ref refid="_consts_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref></type>
+        <definition>bool popc</definition>
+        <argsstring></argsstring>
+        <name>popc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To determine if it will be the first pop on the stack, only mess with if you know what you are doing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="25" column="1" bodyfile="src/Stack.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstack_1af93f4f37fc2ad9c37af4a715423b110c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Top of the stack index use with<programlisting><codeline><highlight class="normal">stack.data[stack.top]<sp/></highlight></codeline>
+</programlisting> to get what&apos;s at the top of the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="31" column="1" bodyfile="src/Stack.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstack_1a439227feff9d7f55384e8780cfc2eb82" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="36" column="1" bodyfile="src/Stack.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstack_1adbe66a087ac3fd4a5b0566f64ca2d12b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The capacity of the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="41" column="1" bodyfile="src/Stack.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstack_1ac103627c1ad15cbec2f22d0abe6d54b6" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The actual data held in the stack </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="46" column="1" bodyfile="src/Stack.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstack_1aebdb418b70e964383b7b0e2fbedde09e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_init</definition>
+        <argsstring>(Stack *stack, int size)</argsstring>
+        <name>stack_init</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the stack with a given size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stack to initialise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size to initialise the stack with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="59" column="1" bodyfile="src/Stack.h" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1afc04d6c48f275815a5a248a37b9f30bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_free</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_free</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Frees the memory allocated to the given stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="75" column="1" bodyfile="src/Stack.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1ac04939a837a201ef916b8df6886d939a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_resize</definition>
+        <argsstring>(Stack *stack, int size)</argsstring>
+        <name>stack_resize</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Resizes the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only mess about with this function if you know what you are doing! </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stack to resize </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size to go with the stack </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="87" column="1" bodyfile="src/Stack.h" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1ae041e1222c96f70d7b1a4528c3b3bf2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_push</definition>
+        <argsstring>(Stack *stack, int data)</argsstring>
+        <name>stack_push</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Pushes a value into the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a stack to push the value into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any value that can be casted into an integer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="100" column="1" bodyfile="src/Stack.h" bodystart="100" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1a86914bce7c52639297c92a086ba87581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_pop</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_pop</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Pops a value from the stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stack to pop a value from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the topmost data on the stack </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="116" column="1" bodyfile="src/Stack.h" bodystart="116" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1ac5b24a79f9821527a6673b7582ae838b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int stack_check</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>stack_check</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="136" column="1" bodyfile="src/Stack.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1a1f99bec6acb65ce01f2079dc1ea2c117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getsizeof_stack</definition>
+        <argsstring>(Stack *stack)</argsstring>
+        <name>getsizeof_stack</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Will be removed on next major, use: </para></xrefdescription></xrefsect><programlisting><codeline><highlight class="normal">stack.size</highlight></codeline>
+</programlisting> instead <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>stack size </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="151" column="1" bodyfile="src/Stack.h" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="structstack_1ac631668285b65b180672342a757df994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stack_merge</definition>
+        <argsstring>(Stack *stack1, Stack *stack2)</argsstring>
+        <name>stack_merge</name>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack1</declname>
+        </param>
+        <param>
+          <type><ref refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" kindref="member">Stack</ref> *</type>
+          <declname>stack2</declname>
+        </param>
+        <briefdescription>
+<para>Merges two stacks together. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>puts the output in the second stack</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">stack1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stack to be merged onto </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">stack2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stack to be merged into </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Stack.h" line="163" column="1" bodyfile="src/Stack.h" bodystart="163" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Standard FILO stack with a traverse function to get any specific index. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="attention"><para>stack_traverse is a bit slower than stack_pop </para></simplesect>
+</para>    </detaileddescription>
+    <location file="src/Stack.h" line="20" column="1" bodyfile="src/Stack.h" bodystart="19" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structstack_1adbe66a087ac3fd4a5b0566f64ca2d12b" prot="public" virt="non-virtual"><scope>stack</scope><name>capacity</name></member>
+      <member refid="structstack_1ac103627c1ad15cbec2f22d0abe6d54b6" prot="public" virt="non-virtual"><scope>stack</scope><name>data</name></member>
+      <member refid="structstack_1a1f99bec6acb65ce01f2079dc1ea2c117" prot="public" virt="non-virtual"><scope>stack</scope><name>getsizeof_stack</name></member>
+      <member refid="structstack_1a2679cd033e6388e644c68ded9ce1fba4" prot="public" virt="non-virtual"><scope>stack</scope><name>popc</name></member>
+      <member refid="structstack_1a439227feff9d7f55384e8780cfc2eb82" prot="public" virt="non-virtual"><scope>stack</scope><name>size</name></member>
+      <member refid="structstack_1aa7883e8bf747b9dedec990b539df2cc0" prot="public" virt="non-virtual"><scope>stack</scope><name>Stack</name></member>
+      <member refid="structstack_1ac5b24a79f9821527a6673b7582ae838b" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_check</name></member>
+      <member refid="structstack_1afc04d6c48f275815a5a248a37b9f30bc" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_free</name></member>
+      <member refid="structstack_1aebdb418b70e964383b7b0e2fbedde09e" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_init</name></member>
+      <member refid="structstack_1ac631668285b65b180672342a757df994" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_merge</name></member>
+      <member refid="structstack_1a86914bce7c52639297c92a086ba87581" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_pop</name></member>
+      <member refid="structstack_1ae041e1222c96f70d7b1a4528c3b3bf2c" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_push</name></member>
+      <member refid="structstack_1ac04939a837a201ef916b8df6886d939a" prot="public" virt="non-virtual"><scope>stack</scope><name>stack_resize</name></member>
+      <member refid="structstack_1af93f4f37fc2ad9c37af4a715423b110c" prot="public" virt="non-virtual"><scope>stack</scope><name>top</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

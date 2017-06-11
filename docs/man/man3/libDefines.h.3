@@ -1,4 +1,4 @@
-.TH "src/libDefines.h" 3 "Thu Jun 8 2017" "Version 0.0.1" "ForgeLib" \" -*- nroff -*-
+.TH "src/libDefines.h" 3 "Fri Jun 9 2017" "Version 0.0.1" "ForgeLib" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,20 +6,138 @@ src/libDefines.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'include\\Stack\&.h'\fP
+\fC#include 'Stack\&.h'\fP
+.br
+\fC#include 'to_rpn\&.h'\fP
 .br
 
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLIB_VER\fP   20170609"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
 .RI "\fBStack\fP \fBto_rpn\fP (char **raw)"
 .br
+.ti -1c
+.RI "void \fBstack_init\fP (\fBStack\fP *\fBstack\fP, int size)"
+.br
+.ti -1c
+.RI "void \fBstack_free\fP (\fBStack\fP *\fBstack\fP)"
+.br
+.ti -1c
+.RI "void \fBstack_resize\fP (\fBStack\fP *\fBstack\fP, int qty)"
+.br
+.ti -1c
+.RI "void \fBstack_push\fP (\fBStack\fP *\fBstack\fP, int data)"
+.br
+.ti -1c
+.RI "int \fBstack_pop\fP (\fBStack\fP *\fBstack\fP)"
+.br
+.ti -1c
+.RI "int \fBstack_check\fP (\fBStack\fP *\fBstack\fP)"
+.br
+.ti -1c
+.RI "int \fBgetsizeof_stack\fP (\fBStack\fP *\fBstack\fP)"
+.br
+.ti -1c
+.RI "void \fBstack_merge\fP (\fBStack\fP *stack1, \fBStack\fP *stack2)"
+.br
 .in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LIB_VER   20170609"
+Copyright (c) 2017 Matheus Silva 
 .SH "Function Documentation"
 .PP 
+.SS "int getsizeof_stack (\fBStack\fP * stack)"
+Gets the size of the stack 
+.SS "int stack_check (\fBStack\fP * stack)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "void stack_free (\fBStack\fP * stack)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.RE
+.PP
+
+.SS "void stack_init (\fBStack\fP * stack, int size)"
+Initialises the stack with a given size 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP the stack to initialise 
+.br
+\fIsize\fP size to initialise the stack with 
+.RE
+.PP
+
+.SS "void stack_merge (\fBStack\fP * stack1, \fBStack\fP * stack2)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack1\fP 
+.br
+\fIstack2\fP 
+.RE
+.PP
+
+.SS "int stack_pop (\fBStack\fP * stack)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "void stack_push (\fBStack\fP * stack, int data)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.br
+\fIdata\fP 
+.RE
+.PP
+
+.SS "void stack_resize (\fBStack\fP * stack, int size)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+
 .SS "\fBStack\fP to_rpn (char ** raw)"
-Copyright (c) 2017 Matheus Silva 
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for ForgeLib from the source code\&.

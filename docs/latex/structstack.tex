@@ -1,0 +1,253 @@
+\hypertarget{structstack}{}\section{stack Struct Reference}
+\label{structstack}\index{stack@{stack}}
+
+
+Standard F\+I\+LO stack with a traverse function to get any specific index.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structstack}{stack} \hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structstack_aebdb418b70e964383b7b0e2fbedde09e}{stack\+\_\+init} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int \hyperlink{structstack_a439227feff9d7f55384e8780cfc2eb82}{size})
+\begin{DoxyCompactList}\small\item\em Initialises the stack with a given size. \end{DoxyCompactList}\item 
+void \hyperlink{structstack_afc04d6c48f275815a5a248a37b9f30bc}{stack\+\_\+free} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated to the given stack. \end{DoxyCompactList}\item 
+void \hyperlink{structstack_ac04939a837a201ef916b8df6886d939a}{stack\+\_\+resize} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int \hyperlink{structstack_a439227feff9d7f55384e8780cfc2eb82}{size})
+\begin{DoxyCompactList}\small\item\em Resizes the stack. \end{DoxyCompactList}\item 
+void \hyperlink{structstack_ae041e1222c96f70d7b1a4528c3b3bf2c}{stack\+\_\+push} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack}, int \hyperlink{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}{data})
+\begin{DoxyCompactList}\small\item\em Pushes a value into the stack. \end{DoxyCompactList}\item 
+int \hyperlink{structstack_a86914bce7c52639297c92a086ba87581}{stack\+\_\+pop} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\begin{DoxyCompactList}\small\item\em Pops a value from the stack. \end{DoxyCompactList}\item 
+int \hyperlink{structstack_ac5b24a79f9821527a6673b7582ae838b}{stack\+\_\+check} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+int \hyperlink{structstack_a1f99bec6acb65ce01f2079dc1ea2c117}{getsizeof\+\_\+stack} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$\hyperlink{structstack}{stack})
+\item 
+void \hyperlink{structstack_ac631668285b65b180672342a757df994}{stack\+\_\+merge} (\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$stack1, \hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$stack2)
+\begin{DoxyCompactList}\small\item\em Merges two stacks together. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_consts_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{structstack_a2679cd033e6388e644c68ded9ce1fba4}{popc}
+\item 
+int \hyperlink{structstack_af93f4f37fc2ad9c37af4a715423b110c}{top}
+\item 
+int \hyperlink{structstack_a439227feff9d7f55384e8780cfc2eb82}{size}
+\item 
+int \hyperlink{structstack_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}
+\item 
+int $\ast$ \hyperlink{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}{data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Standard F\+I\+LO stack with a traverse function to get any specific index. 
+
+\begin{DoxyAttention}{Attention}
+stack\+\_\+traverse is a bit slower than stack\+\_\+pop 
+\end{DoxyAttention}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structstack_aa7883e8bf747b9dedec990b539df2cc0}\label{structstack_aa7883e8bf747b9dedec990b539df2cc0}} 
+\index{stack@{stack}!Stack@{Stack}}
+\index{Stack@{Stack}!stack@{stack}}
+\subsubsection{\texorpdfstring{Stack}{Stack}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structstack}{stack} \hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structstack_a1f99bec6acb65ce01f2079dc1ea2c117}\label{structstack_a1f99bec6acb65ce01f2079dc1ea2c117}} 
+\index{stack@{stack}!getsizeof\+\_\+stack@{getsizeof\+\_\+stack}}
+\index{getsizeof\+\_\+stack@{getsizeof\+\_\+stack}!stack@{stack}}
+\subsubsection{\texorpdfstring{getsizeof\+\_\+stack()}{getsizeof\_stack()}}
+{\footnotesize\ttfamily int getsizeof\+\_\+stack (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]Will be removed on next major, use\+: \end{DoxyRefDesc}
+
+\begin{DoxyCode}
+\hyperlink{structstack}{stack}.\hyperlink{structstack_a439227feff9d7f55384e8780cfc2eb82}{size}
+\end{DoxyCode}
+ instead 
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stack size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structstack_ac5b24a79f9821527a6673b7582ae838b}\label{structstack_ac5b24a79f9821527a6673b7582ae838b}} 
+\index{stack@{stack}!stack\+\_\+check@{stack\+\_\+check}}
+\index{stack\+\_\+check@{stack\+\_\+check}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+check()}{stack\_check()}}
+{\footnotesize\ttfamily int stack\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]\end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{structstack_afc04d6c48f275815a5a248a37b9f30bc}\label{structstack_afc04d6c48f275815a5a248a37b9f30bc}} 
+\index{stack@{stack}!stack\+\_\+free@{stack\+\_\+free}}
+\index{stack\+\_\+free@{stack\+\_\+free}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+free()}{stack\_free()}}
+{\footnotesize\ttfamily void stack\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated to the given stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structstack_aebdb418b70e964383b7b0e2fbedde09e}\label{structstack_aebdb418b70e964383b7b0e2fbedde09e}} 
+\index{stack@{stack}!stack\+\_\+init@{stack\+\_\+init}}
+\index{stack\+\_\+init@{stack\+\_\+init}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+init()}{stack\_init()}}
+{\footnotesize\ttfamily void stack\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Initialises the stack with a given size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & the stack to initialise \\
+\hline
+\mbox{\tt in}  & {\em size} & size to initialise the stack with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structstack_ac631668285b65b180672342a757df994}\label{structstack_ac631668285b65b180672342a757df994}} 
+\index{stack@{stack}!stack\+\_\+merge@{stack\+\_\+merge}}
+\index{stack\+\_\+merge@{stack\+\_\+merge}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+merge()}{stack\_merge()}}
+{\footnotesize\ttfamily void stack\+\_\+merge (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack1,  }\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack2 }\end{DoxyParamCaption})}
+
+
+
+Merges two stacks together. 
+
+\begin{DoxyAttention}{Attention}
+puts the output in the second stack
+\end{DoxyAttention}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack1} & Stack to be merged onto \\
+\hline
+\mbox{\tt out}  & {\em stack2} & Stack to be merged into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structstack_a86914bce7c52639297c92a086ba87581}\label{structstack_a86914bce7c52639297c92a086ba87581}} 
+\index{stack@{stack}!stack\+\_\+pop@{stack\+\_\+pop}}
+\index{stack\+\_\+pop@{stack\+\_\+pop}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+pop()}{stack\_pop()}}
+{\footnotesize\ttfamily int stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Pops a value from the stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & the stack to pop a value from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the topmost data on the stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structstack_ae041e1222c96f70d7b1a4528c3b3bf2c}\label{structstack_ae041e1222c96f70d7b1a4528c3b3bf2c}} 
+\index{stack@{stack}!stack\+\_\+push@{stack\+\_\+push}}
+\index{stack\+\_\+push@{stack\+\_\+push}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+push()}{stack\_push()}}
+{\footnotesize\ttfamily void stack\+\_\+push (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Pushes a value into the stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & a stack to push the value into \\
+\hline
+\mbox{\tt in}  & {\em data} & any value that can be casted into an integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structstack_ac04939a837a201ef916b8df6886d939a}\label{structstack_ac04939a837a201ef916b8df6886d939a}} 
+\index{stack@{stack}!stack\+\_\+resize@{stack\+\_\+resize}}
+\index{stack\+\_\+resize@{stack\+\_\+resize}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack\+\_\+resize()}{stack\_resize()}}
+{\footnotesize\ttfamily void stack\+\_\+resize (\begin{DoxyParamCaption}\item[{\hyperlink{structstack_aa7883e8bf747b9dedec990b539df2cc0}{Stack} $\ast$}]{stack,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Resizes the stack. 
+
+\begin{DoxyWarning}{Warning}
+Only mess about with this function if you know what you are doing! 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stack} & the stack to resize \\
+\hline
+\mbox{\tt in}  & {\em size} & the size to go with the stack \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structstack_adbe66a087ac3fd4a5b0566f64ca2d12b}\label{structstack_adbe66a087ac3fd4a5b0566f64ca2d12b}} 
+\index{stack@{stack}!capacity@{capacity}}
+\index{capacity@{capacity}!stack@{stack}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int capacity}
+
+The capacity of the stack \mbox{\Hypertarget{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}\label{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}} 
+\index{stack@{stack}!data@{data}}
+\index{data@{data}!stack@{stack}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily int$\ast$ data}
+
+The actual data held in the stack \mbox{\Hypertarget{structstack_a2679cd033e6388e644c68ded9ce1fba4}\label{structstack_a2679cd033e6388e644c68ded9ce1fba4}} 
+\index{stack@{stack}!popc@{popc}}
+\index{popc@{popc}!stack@{stack}}
+\subsubsection{\texorpdfstring{popc}{popc}}
+{\footnotesize\ttfamily \hyperlink{_consts_8h_af6a258d8f3ee5206d682d799316314b1}{bool} popc}
+
+To determine if it will be the first pop on the stack, only mess with if you know what you are doing \mbox{\Hypertarget{structstack_a439227feff9d7f55384e8780cfc2eb82}\label{structstack_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{stack@{stack}!size@{size}}
+\index{size@{size}!stack@{stack}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size}
+
+The size of the stack \mbox{\Hypertarget{structstack_af93f4f37fc2ad9c37af4a715423b110c}\label{structstack_af93f4f37fc2ad9c37af4a715423b110c}} 
+\index{stack@{stack}!top@{top}}
+\index{top@{top}!stack@{stack}}
+\subsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily int top}
+
+Top of the stack index use with
+\begin{DoxyCode}
+\hyperlink{structstack}{stack}.\hyperlink{structstack_ac103627c1ad15cbec2f22d0abe6d54b6}{data}[\hyperlink{structstack}{stack}.\hyperlink{structstack_af93f4f37fc2ad9c37af4a715423b110c}{top}] 
+\end{DoxyCode}
+ to get what\textquotesingle{}s at the top of the stack 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_stack_8h}{Stack.\+h}\end{DoxyCompactItemize}

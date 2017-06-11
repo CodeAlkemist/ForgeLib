@@ -1,8 +1,8 @@
-.TH "src/include/Stack.h" 3 "Thu Jun 8 2017" "Version 0.0.1" "ForgeLib" \" -*- nroff -*-
+.TH "src/Stack.h" 3 "Fri Jun 9 2017" "Version 0.0.1" "ForgeLib" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/include/Stack.h
+src/Stack.h
 .SH SYNOPSIS
 .br
 .PP
@@ -15,60 +15,52 @@ src/include/Stack.h
 
 .in +1c
 .ti -1c
-.RI "struct \fBStack\fP"
+.RI "struct \fBstack\fP"
 .br
+.RI "Standard FILO stack with a traverse function to get any specific index\&. "
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBstack_init\fP (\fBStack\fP *stack)"
+.RI "int \fBstack_traverse\fP (\fBStack\fP *\fBstack\fP, int index)"
 .br
-.ti -1c
-.RI "void \fBstack_free\fP (\fBStack\fP *stack)"
-.br
-.ti -1c
-.RI "\fBbool\fP \fBstack_resize\fP (\fBStack\fP *stack, int qty)"
-.br
-.ti -1c
-.RI "int \fBstack_get_arbitrary\fP (\fBStack\fP *stack, int index)"
-.br
-.ti -1c
-.RI "void \fBstack_push\fP (\fBStack\fP *stack, int data)"
-.br
-.ti -1c
-.RI "int \fBstack_pop\fP (\fBStack\fP *stack)"
-.br
-.ti -1c
-.RI "int \fBstack_check\fP (\fBStack\fP *stack)"
-.br
-.ti -1c
-.RI "int \fBgetsizeof_stack\fP (\fBStack\fP *stack)"
-.br
-.ti -1c
-.RI "void \fBstack_merge\fP (\fBStack\fP *stack1, \fBStack\fP *stack2)"
-.br
+.RI "Traverse the stack to the desired index\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2017 Matheus Xavier Silva 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Matheus Xavier Silva 
+.RE
+.PP
+
 .SH "Function Documentation"
 .PP 
-.SS "int getsizeof_stack (\fBStack\fP * stack)"
-Gets the size of the stack 
-.SS "int stack_check (\fBStack\fP * stack)"
-Gets the topmost item on the stack 
-.SS "void stack_free (\fBStack\fP * stack)"
-Free the memory allocated to the stack passed as argument 
-.SS "int stack_get_arbitrary (\fBStack\fP * stack, int index)"
-Get a value at an arbitrary index of the stack this is not part of the general concept of a stack and this function will be slower to run than pop 
-.SS "void stack_init (\fBStack\fP * stack)"
-Initialise the stack 
-.SS "void stack_merge (\fBStack\fP * stack1, \fBStack\fP * stack2)"
-Merges stack1 into stack2 Returns: nothing the resulting stack is stack2 
-.SS "int stack_pop (\fBStack\fP * stack)"
-Pop from the stack 
-.SS "void stack_push (\fBStack\fP * stack, int data)"
-Push to the stack 
-.SS "\fBbool\fP stack_resize (\fBStack\fP * stack, int qty)"
-Increase capacity by a given number defaults to 1 
+.SS "int stack_traverse (\fBStack\fP * stack, int index)"
+
+.PP
+Traverse the stack to the desired index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstack\fP 
+.br
+\fIindex\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for ForgeLib from the source code\&.

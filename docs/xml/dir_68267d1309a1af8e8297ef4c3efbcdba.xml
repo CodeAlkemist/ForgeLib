@@ -2,9 +2,15 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
-    <innerdir refid="dir_b0856f6b0d80ccb263b2f415c91f9e17">src/include</innerdir>
-    <innerfile refid="lib_defines_8h">libDefines.h</innerfile>
-    <innerfile refid="to__rpn_8c">to_rpn.c</innerfile>
+    <innerfile refid="_config_8h">Config.h</innerfile>
+    <innerfile refid="_consts_8h">Consts.h</innerfile>
+    <innerfile refid="diagnostic_8c">diagnostic.c</innerfile>
+    <innerfile refid="libforge_8h">libforge.h</innerfile>
+    <innerfile refid="_stack_8h">Stack.h</innerfile>
+    <innerfile refid="_string_8h">String.h</innerfile>
+    <innerfile refid="_test_8c">Test.c</innerfile>
+    <innerfile refid="to__rpn_8h">to_rpn.h</innerfile>
+    <innerfile refid="_vector_8h">Vector.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

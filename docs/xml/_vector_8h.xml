@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_vector_8h" kind="file" language="C++">
+    <compoundname>Vector.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="_config_8h" local="yes">Config.h</includes>
+    <incdepgraph>
+      <node id="49">
+        <label>stdlib.h</label>
+      </node>
+      <node id="50">
+        <label>Config.h</label>
+        <link refid="_config_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Consts.h</label>
+        <link refid="_consts_8h"/>
+      </node>
+      <node id="48">
+        <label>src/Vector.h</label>
+        <link refid="_vector_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structvector" prot="public">vector</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" prot="public" static="no">
+        <type>struct <ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>typedef struct vector Vector</definition>
+        <argsstring></argsstring>
+        <name>Vector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="29" column="1" bodyfile="src/Vector.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_vector_8h_1a6e0e552c591db3a0085e76874e406f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vector_init</definition>
+        <argsstring>(Vector *vector, int size)</argsstring>
+        <name>vector_init</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="26" column="1" bodyfile="src/Vector.h" bodystart="26" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1a03eaa4d3c98ea2f13f8ae6d77a07ea3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vector_free</definition>
+        <argsstring>(Vector *vector)</argsstring>
+        <name>vector_free</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free the memory allocated to the vector passed as argument </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="38" column="1" bodyfile="src/Vector.h" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1ae761fd99c177ddda5f8b6191d0b46333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vector_resize</definition>
+        <argsstring>(Vector *vector, int qty)</argsstring>
+        <name>vector_resize</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>qty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increase capacity by a given number defaults to 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="44" column="1" bodyfile="src/Vector.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1ac8891afc7105a03cdca286e0024f9cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vector_push</definition>
+        <argsstring>(Vector *vector, int data)</argsstring>
+        <name>vector_push</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push to the vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="50" column="1" bodyfile="src/Vector.h" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1a6ca8414a08539d24ebdb858cf20908c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vector_pop</definition>
+        <argsstring>(Vector *vector)</argsstring>
+        <name>vector_pop</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pop from the vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="60" column="1" bodyfile="src/Vector.h" bodystart="60" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1ab8d088875ad28d5e9724477576d62ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vector_check</definition>
+        <argsstring>(Vector *vector)</argsstring>
+        <name>vector_check</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the topmost item on the vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="74" column="1" bodyfile="src/Vector.h" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1a7e2d2ab748305748ea6ac620aee6c833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getsizeof_vector</definition>
+        <argsstring>(Vector *vector)</argsstring>
+        <name>getsizeof_vector</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the size of the vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="79" column="1" bodyfile="src/Vector.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="_vector_8h_1a5f757178547e6af0cf04418c9efa3dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vector_merge</definition>
+        <argsstring>(Vector *vector1, Vector *vector2)</argsstring>
+        <name>vector_merge</name>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector1</declname>
+        </param>
+        <param>
+          <type><ref refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" kindref="member">Vector</ref> *</type>
+          <declname>vector2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Merges vector1 into vector2 Returns: nothing the resulting vector in vector2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Vector.h" line="88" column="1" bodyfile="src/Vector.h" bodystart="88" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>Copyright (c) 2017 Matheus Xavier Silva </para></simplesect>
+<simplesect kind="author"><para>Matheus Xavier Silva </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_config_8h" kindref="compound">Config.h</ref>&quot;</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">/*<sp/>Define<sp/>the<sp/>type*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structvector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" kindref="member">popc</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23" refid="_vector_8h_1a67df6442cbc09def7e2d82c71522e1ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref><sp/><ref refid="structvector" kindref="compound">Vector</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_vector_8h_1a6e0e552c591db3a0085e76874e406f6a" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1a6e0e552c591db3a0085e76874e406f6a" kindref="member">vector_init</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialise<sp/>size<sp/>and<sp/>capacity<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref><sp/>=<sp/><ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" kindref="member">popc</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>memory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref><sp/>=<sp/>malloc(<ref refid="_config_8h_1a077ed361b17b3331f4506422a383aaae" kindref="member">SIZE_OF_INT</ref><sp/>*<sp/>vector-&gt;<ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_vector_8h_1a03eaa4d3c98ea2f13f8ae6d77a07ea3e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1a03eaa4d3c98ea2f13f8ae6d77a07ea3e" kindref="member">vector_free</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>free(vector);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_vector_8h_1ae761fd99c177ddda5f8b6191d0b46333" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1ae761fd99c177ddda5f8b6191d0b46333" kindref="member">vector_resize</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>qty)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref><sp/>+=<sp/>qty;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref><sp/>=<sp/>realloc(vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>,<sp/><ref refid="_config_8h_1a077ed361b17b3331f4506422a383aaae" kindref="member">SIZE_OF_INT</ref><sp/>*<sp/>vector-&gt;<ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50" refid="_vector_8h_1ac8891afc7105a03cdca286e0024f9cb7" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1ac8891afc7105a03cdca286e0024f9cb7" kindref="member">vector_push</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>+<sp/>1)<sp/>&gt;=<sp/>vector-&gt;<ref refid="structvector_1adbe66a087ac3fd4a5b0566f64ca2d12b" kindref="member">capacity</ref>){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_vector_8h_1ae761fd99c177ddda5f8b6191d0b46333" kindref="member">vector_resize</ref>(vector,<sp/>1);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>++;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>data<sp/>to<sp/>the<sp/>top<sp/>of<sp/>the<sp/>vector<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>[vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>++]<sp/>=<sp/><ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60" refid="_vector_8h_1a6ca8414a08539d24ebdb858cf20908c0" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1a6ca8414a08539d24ebdb858cf20908c0" kindref="member">vector_pop</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(vector-&gt;<ref refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" kindref="member">popc</ref>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>--;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>--;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a2679cd033e6388e644c68ded9ce1fba4" kindref="member">popc</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>[vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>--;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>--;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74" refid="_vector_8h_1ab8d088875ad28d5e9724477576d62ad3" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1ab8d088875ad28d5e9724477576d62ad3" kindref="member">vector_check</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vector-&gt;<ref refid="structvector_1ac103627c1ad15cbec2f22d0abe6d54b6" kindref="member">data</ref>[vector-&gt;<ref refid="structvector_1af93f4f37fc2ad9c37af4a715423b110c" kindref="member">top</ref>];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79" refid="_vector_8h_1a7e2d2ab748305748ea6ac620aee6c833" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1a7e2d2ab748305748ea6ac620aee6c833" kindref="member">getsizeof_vector</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*<ref refid="structvector" kindref="compound">vector</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vector-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_vector_8h_1a5f757178547e6af0cf04418c9efa3dc5" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_vector_8h_1a5f757178547e6af0cf04418c9efa3dc5" kindref="member">vector_merge</ref>(<ref refid="structvector" kindref="compound">Vector</ref><sp/>*vector1,<sp/><ref refid="structvector" kindref="compound">Vector</ref><sp/>*vector2)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(vector1-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(vector1-&gt;<ref refid="structvector_1a439227feff9d7f55384e8780cfc2eb82" kindref="member">size</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_vector_8h_1ac8891afc7105a03cdca286e0024f9cb7" kindref="member">vector_push</ref>(vector2,<sp/><ref refid="_vector_8h_1a6ca8414a08539d24ebdb858cf20908c0" kindref="member">vector_pop</ref>(vector1));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_vector_8h_1a03eaa4d3c98ea2f13f8ae6d77a07ea3e" kindref="member">vector_free</ref>(vector1);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Vector.h"/>
+  </compounddef>
+</doxygen>
