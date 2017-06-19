@@ -4,7 +4,7 @@
  * Takes 2 times the size of the input in ram to work
  */
 
-
+#include "libforge.h"
 /**
  * Return the operator precedence
  */

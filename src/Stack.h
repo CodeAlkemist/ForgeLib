@@ -4,7 +4,6 @@
  * @file Stack.h
  */
 
-#pragma once
 #include <stdlib.h>
 #include "Config.h"
 
@@ -178,7 +177,7 @@ void stack_merge(Stack *stack1, Stack *stack2)
  * @param[in] index index to traverse to
  * @return traversed index contents in case of error returns 0xBADBEEF
  */
-int stack_traverse(Stack *stack, int index, bool uso)
+int stack_traverse(Stack *stack, int index)
 {
 	if(index > stack->size || index < 0)
 	{

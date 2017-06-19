@@ -5,12 +5,15 @@
 #include <stdlib.h>
 #include "Config.h"
 
-typedef struct
+struct string
 {
+	int top;
 	int size;
 	int capacity;
 	char *data;
-} String;
+};
+
+typedef struct string String;
 
 void string_init(String *str, bool appendnull)
 {
@@ -20,6 +23,6 @@ void string_init(String *str, bool appendnull)
 	/* Allocate memory to the string */
 	if(appendnull == true)
 	{
-
+		malloc();
 	}
 }
