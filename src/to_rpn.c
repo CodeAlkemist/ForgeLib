@@ -4,7 +4,7 @@
  * Takes 2 times the size of the input in ram to work
  */
 
-#include "libforge.h"
+#include "stack.h"
 /**
  * Return the operator precedence
  */
@@ -25,14 +25,14 @@ int op_precedence(char op)
 	return 0;
 }
 
-Stack to_rpn(char **raw)
+stack to_rpn(char **raw)
 {
-	Stack out;
+	stack out;
 	stack_init(&out, (int)sizeof(raw));
-	Stack ops;
+	stack ops;
 	stack_init(&ops, 10);
 	/* Create error stack just in case but left it uninitialised */
-	Stack err;
+	stack err;
 	int pc = 0x0000;
 	while (pc <= (int)sizeof(raw) - 1)
 	{

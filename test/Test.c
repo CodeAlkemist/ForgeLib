@@ -1,11 +1,11 @@
-#include "../src/libforge.h"
+#include "../src/all.h"
 #include "stdlib.h"
 #include "stdio.h"
 
 int main(int argc, char **argv) {
 	printf("ForgeLib Test Tool (c) 2017 Matheus Xavier Silva All Rights Reserved\nInitialising testing\nProcceed?");
 	getchar();
-	Stack test;
+	stack test;
 	stack_init(&test, 255);
 	int a = 1;
 	int lc = 0;
@@ -16,9 +16,9 @@ int main(int argc, char **argv) {
 		a++;
 	}
 	printf("\n=============================================\n");
-	printf("finished pushing stack top : %i | size: %i | capacity: %i | version: %i", test.top, test.size, test.capacity, LIB_VER);
+	printf("finished pushing stack top : %i | size: %i | capacity: %i | version: %s", test.top, test.size, test.capacity, LIB_VER);
 	printf("\n---------------------------------------------\n");
-	printf("started popping stack top : %i | size: %i | capacity: %i | version: %i | data at top: %i", test.top, test.size, test.capacity, LIB_VER, test.data[test.top]);
+	printf("started popping stack top : %i | size: %i | capacity: %i | version: %s | data at top: %i", test.top, test.size, test.capacity, LIB_VER, test.data[test.top]);
 	printf("\n*********************************************\n");
 	getchar();
 	int i2 = 0;
@@ -31,7 +31,9 @@ int main(int argc, char **argv) {
 		++i2;
 		lc++;
 	}
-	printf("finished popping stack top : %i | size: %i | capacity: %i | version: %i | data at top(expect garbage): %i", test.top, test.size, test.capacity, LIB_VER, test.data[test.top]);
-	stack_free(&test);
+	printf("finished popping stack top : %i | size: %i | capacity: %i | version: %s | data at top(expect garbage): %i", test.top, test.size, test.capacity, LIB_VER, test.data[test.top]);
+	int * pd = &test.data[test.top];
+	stack_sanitised_free(&test);
+	printf("Testing for the proper clearing of the memory (should return 0xFFFFFFFF): 0x%08X", *pd);
 	return 1;
 }
