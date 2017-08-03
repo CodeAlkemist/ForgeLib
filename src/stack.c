@@ -1,14 +1,13 @@
 /**
  * @copyright Copyright (c) 2017 Matheus Xavier Silva
  * @author Matheus Xavier Silva
- * @file stack.c
- * Documentation on the functions and supplemental details can be found in the corresponding header file
  */
 
 #include "stack.h"
 #include <stdlib.h>
 
-void stack_init(stack *in, int size)
+#ifndef __STACK_LIB__
+void stack_init(stack_t *in, int size)
 {
   /* Initialise size and capacity */
   in->size = size;
@@ -19,12 +18,12 @@ void stack_init(stack *in, int size)
   in->data = malloc(SIZE_OF_INT * in->capacity);
 }
 
-void stack_free(stack *in)
+void stack_free(stack_t *in)
 {
   free(in);
 }
 
-void stack_sanitised_free(stack *in)
+void stack_sanitised_free(stack_t *in)
 {
   while(in->top >= 0)
   {
@@ -35,14 +34,14 @@ void stack_sanitised_free(stack *in)
 }
 
 #ifndef __NO_DYN_SIZE__
-void __stack_resize(stack *in, unsigned int size)
+void __stack_resize(stack_t *in, unsigned int size)
 {
   in->capacity += size;
   in->data = realloc(in->data, SIZE_OF_INT * in->capacity);
 }
 #endif
 
-void stack_push(stack *in, int data)
+void stack_push(stack_t *in, int data)
 {
   if((in->size + 1) >= in->capacity){
 #ifndef __NO_DYN_ALOC__
@@ -52,11 +51,11 @@ void stack_push(stack *in, int data)
 #endif
   }
   in->size++;
-  /* Add data to the top of the stack */
+  /* Add data to the top of the stack_t */
   in->data[in->top++] = data;
 }
 
-int stack_pop(stack *in)
+int stack_pop(stack_t *in)
 {
   if(in->popc)
   {
@@ -70,17 +69,17 @@ int stack_pop(stack *in)
   return tmp;
 }
 
-int stack_check(stack *in)
+int stack_check(stack_t *in)
 {
   return in->data[in->top];
 }
 
-int getsizeof_stack(stack *in)
+int getsizeof_stack(stack_t *in)
 {
   return in->size;
 }
 
-void stack_merge(stack *stack1, stack *stack2)
+void stack_merge(stack_t *stack1, stack_t *stack2)
 {
   if(stack1->size != 0)
   {
@@ -93,7 +92,7 @@ void stack_merge(stack *stack1, stack *stack2)
   }
 }
 
-int stack_traverse(stack *in, int index)
+int stack_traverse(stack_t *in, int index)
 {
   if(index > in->size || index < 0)
   {
@@ -101,3 +100,5 @@ int stack_traverse(stack *in, int index)
   }
   return in->data[index];
 }
+#define __STACK_LIB__
+#endif
