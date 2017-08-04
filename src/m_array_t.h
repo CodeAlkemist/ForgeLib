@@ -24,8 +24,8 @@
 /**
  *	@struct __stack
  */
-#ifndef __STACK_LIB__
-struct __stack
+#ifndef __ARRAY_LIB__
+struct __m_array_t
 {
   /**
    * To determine if it will be the first pop on the m_array_t, only mess with if you know what you are doing
@@ -58,7 +58,7 @@ struct __stack
 /**
  * @memberof m_array_t
  */
-typedef struct __stack m_array_t;
+typedef struct __m_array_t m_array_t;
 
 /**
  * @brief Initialises the m_array_t with a given size
@@ -143,5 +143,5 @@ extern void m_array_merge(m_array_t *stack1, m_array_t *stack2);
  * @return traversed index contents in case of error returns 0xBADBEEF
  */
 extern int m_array_traverse(m_array_t *in, int index);
-#define __STACK_LIB__
+#define __ARRAY_LIB__
 #endif

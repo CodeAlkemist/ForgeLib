@@ -111,5 +111,5 @@ int m_array_traverse(m_array_t *in, int index)
   }
   return in->data[index];
 }
-#define __STACK_LIB__
+#define __ARRAY_LIB__
 #endif
