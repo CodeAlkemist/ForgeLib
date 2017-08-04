@@ -5,11 +5,15 @@
             "includePath": [],
             "defines": [],
             "browse": {
-                "path": [],
+                "path": [
+                    "${workspaceRoot}",
+                    "C:\\MinGW\\include"
+                ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
             "intelliSenseMode": "msvc-x64"
         }
-    ]
+    ],
+    "version": 2
 }

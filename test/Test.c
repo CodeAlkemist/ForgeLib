@@ -32,8 +32,5 @@ int main(int argc, char **argv) {
 		lc++;
 	}
 	printf("finished popping stack top : %i | size: %i | capacity: %i | version: %s | data at top(expect garbage): %i", test.top, test.size, test.capacity, LIB_VER, test.data[test.top]);
-	int * pd = &test.data[test.top];
-	stack_sanitised_free(&test);
-	printf("Testing for the proper clearing of the memory (should return 0xFFFFFFFF): 0x%08X", *pd);
 	return 1;
 }

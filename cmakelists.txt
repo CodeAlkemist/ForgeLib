@@ -1,9 +1,0 @@
-cmake_minimum_required(VERSION 3.9)
-
-project(LibForge)
-
-file(SOURCES "src/*.h")
-set(PROJECT_SOURCE_DIR src)
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
-
-add_library(libforge BUILD_SHARED_LIBS ${SOURCES});
