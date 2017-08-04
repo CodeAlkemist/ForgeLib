@@ -14,11 +14,11 @@
     limitations under the License.
 */
 
-#include "m_array_t.h"
+#include "e_array_t.h"
 #include <stdlib.h>
 
 #ifndef __ARRAY_LIB__
-void m_array_init(m_array_t *in, int size)
+void e_array_init(e_array_t *in, int size)
 {
   /* Initialise size and capacity */
   in->size = size;
@@ -29,12 +29,12 @@ void m_array_init(m_array_t *in, int size)
   in->data = malloc(SIZE_OF_INT * in->capacity);
 }
 
-void m_array_free(m_array_t *in)
+void e_array_free(e_array_t *in)
 {
   free(in);
 }
 
-void m_array_sanitised_free(m_array_t *in)
+void e_array_sanitised_free(e_array_t *in)
 {
   while(in->top >= 0)
   {
@@ -45,28 +45,28 @@ void m_array_sanitised_free(m_array_t *in)
 }
 
 #ifndef __NO_DYN_SIZE__
-void __m_array_resize(m_array_t *in, unsigned int size)
+void __e_array_resize(e_array_t *in, unsigned int size)
 {
   in->capacity += size;
   in->data = realloc(in->data, SIZE_OF_INT * in->capacity);
 }
 #endif
 
-void m_array_push(m_array_t *in, int data)
+void e_array_push(e_array_t *in, int data)
 {
   if((in->size + 1) >= in->capacity){
 #ifndef __NO_DYN_ALOC__
-      __m_array_resize(in, 1);
+      __e_array_resize(in, 1);
 #else
       return 0x1AC0F;
 #endif
   }
   in->size++;
-  /* Add data to the top of the m_array_t */
+  /* Add data to the top of the e_array_t */
   in->data[in->top++] = data;
 }
 
-int m_array_pop(m_array_t *in)
+int e_array_pop(e_array_t *in)
 {
   if(in->popc)
   {
@@ -80,30 +80,25 @@ int m_array_pop(m_array_t *in)
   return tmp;
 }
 
-int m_array_check(m_array_t *in)
+int e_array_check(e_array_t *in)
 {
   return in->data[in->top];
 }
 
-int getsizeof_stack(m_array_t *in)
-{
-  return in->size;
-}
-
-void m_array_merge(m_array_t *stack1, m_array_t *stack2)
+void e_array_merge(e_array_t *stack1, e_array_t *stack2)
 {
   if(stack1->size != 0)
   {
-      m_array_push(stack2, m_array_pop(stack1));
-      m_array_merge(stack1, stack2);
+      e_array_push(stack2, e_array_pop(stack1));
+      e_array_merge(stack1, stack2);
   }
   else
   {
-      m_array_free(stack1);
+      e_array_free(stack1);
   }
 }
 
-int m_array_traverse(m_array_t *in, int index)
+int e_array_traverse(e_array_t *in, int index)
 {
   if(index > in->size || index < 0)
   {
